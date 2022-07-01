@@ -52,6 +52,66 @@ table {
   border-spacing: 0;
 }
 
-.test {
+@font-face {
+  font-family: Roboto;
+  src: url(../assets/Fonts/Roboto/Roboto-Regular.ttf);
+}
+.main {
+  font-family: Roboto;
   background-color: #00003B;
+  color: white;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 0.5rem 1rem;
+}
+.main-home {
+  margin: 1rem;
+}
+.main-home-intro {
+  font-size: large;
+}
+.main-home-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.footer {
+  margin: 1rem;
+}
+.footer-nav {
+  visibility: hidden;
+}
+.footer-contactform {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.footer-contactform-title {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.footer-contactform-input {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+.footer-contactform-input-textarea {
+  height: 15vh;
+  max-width: 100%;
+}
+.footer-contactform-submit {
+  background-color: #00003B;
+  color: white;
+  border: 2px solid;
+  border-radius: 10px;
+  height: 2rem;
+  width: 5rem;
+}
+
+.subtitle {
+  margin: 1rem;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=styles.css.map */
