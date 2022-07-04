@@ -1,6 +1,7 @@
 @import "./partials/reset";
 @import "./partials/vars";
 @import "./mixins/footer";
+@import "./mixins/header";
 
 @font-face {
     font-family: Roboto;
@@ -16,7 +17,7 @@
     flex-direction: column;
     padding: 0 1rem 0.5rem 1rem;
     &-header{
-
+        @include header;
     };
     &-home{
         margin: 1rem;
@@ -27,12 +28,14 @@
             font-weight:bold;
             font-size: 2rem ;
         }
-    }
+    };
+   &-footer{
+     @include footer;
+   }
+
 }
 
-.footer{
-    @include footer;
-}
+
 
 
 

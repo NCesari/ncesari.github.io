@@ -1,0 +1,13 @@
+@mixin header{
+    margin-top: 1rem;
+    &-logo{
+        height: 30px;
+        width: 30px;
+    }
+    &-brand{
+        color: white;
+    }
+    &-nav{
+        visibility: hidden;
+    }
+}
