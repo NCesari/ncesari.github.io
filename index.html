@@ -6,20 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicolas Cesari Développeur Web</title>
     <link rel="stylesheet" href="/styles/styles.css">
+    
 </head>
     <body>
         <div class="main">
             <header class="main-header">
-                <a href="/index.html">
-                    <img class="main-header-logo" src="./assets/Logo/Logo6.png" alt="">
-                    <span class="main-header-brand">NCESARI</span>
-                </a>
-                <nav class="main-header-nav">
-                    <a href="/">Accueil</a>
-                    <a href="./pages/services.html">Services</a>
-                    <a href="./pages/porfolio">Porfolio</a>
-                    <a href="./pages/about">A Propos</a>
-                    <a href="./pages/contact">Contact</a>
+                
+                <nav class="main-header-nav" id="nav">
+                    <a class="main-header-nav-logo" href="/index.html">
+                        <img src="./assets/Logo/Logo6.png" alt="">
+                        <img src="./assets/Logo/NCESARI.png" alt="">
+                    </a>
+                    <ul class="main-header-nav-links">
+                        <li class="main-header-nav-links-link"><a href="/">Accueil</a></li>
+                        <li class="main-header-nav-links-link"><a href="./pages/services.html">Services</a></li>
+                        <li class="main-header-nav-links-link"><a href="./pages/porfolio">Porfolio</a></li>
+                        <li class="main-header-nav-links-link"><a href="./pages/about">A Propos</a></li>
+                        <li class="main-header-nav-links-link"><a href="./pages/contact">Contact</a></li>
+                    </ul>
+                    <button class="main-header-nav-ham" id="burger">
+                        <span class="main-header-nav-ham-bar"></span>
+                    </button>
                 </nav>
             </header>
             <main class="main-home">
@@ -82,5 +89,6 @@
                 </div>
             </footer>
         </div>
-    </body>   
+    </body>
+    <script src="./index.js"></script>
 </html>
