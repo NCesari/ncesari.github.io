@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="/styles/styles.css">
     
 </head>
-    <body>
-        <div class="main">
+    <div class="main">
+        <body>
             <header class="main-header">
-                
                 <nav class="main-header-nav" id="nav">
-                    <a class="main-header-nav-logo" href="/index.html">
-                        <img src="./assets/Logo/Logo6.png" alt="">
-                        <img src="./assets/Logo/NCESARI.png" alt="">
-                    </a>
+                        <a class="main-header-nav-brand" href="/index.html">
+                            <img class="main-header-nav-brand-logo" src="./assets/Logo/Logo6.png" alt="">
+                            <img class="main-header-nav-brand-name" src="./assets/Logo/NCESARI.png" alt="">
+                        </a>
+                        <button class="main-header-nav-burger" id="burger">
+                            <span class="main-header-nav-burger-bar"></span>
+                        </button>
                     <ul class="main-header-nav-links">
                         <li class="main-header-nav-links-link"><a href="/">Accueil</a></li>
                         <li class="main-header-nav-links-link"><a href="./pages/services.html">Services</a></li>
@@ -24,37 +26,36 @@
                         <li class="main-header-nav-links-link"><a href="./pages/about">A Propos</a></li>
                         <li class="main-header-nav-links-link"><a href="./pages/contact">Contact</a></li>
                     </ul>
-                    <button class="main-header-nav-ham" id="burger">
-                        <span class="main-header-nav-ham-bar"></span>
-                    </button>
                 </nav>
             </header>
             <main class="main-home">
-                <p class="main-home-intro">Bonjour, je m'appelle Nicolas Cesari, je suis</p>
-                <h1 class="main-home-title">Développeur Web</h1>
-                <div>
-                    <h3 class="subtitle">Services</h3>
-                    <article>
-                        <h4 class="service-title">Site vitrine</h4>
-                        <p>Faites exister votre entreprise sur le web</p>
-                    </article>
-                    <article>
-                        <h4>Blog</h4>
-                        <p>Diffusez votre message au monde</p>
-                    </article>
-                    <article>
-                        <h4>Site E-Commerce</h4>
-                        <p>Ouvrez votre boutique en ligne</p>
-                    </article>
-                    <article>
-                        <h4>Site sur mesure</h4>
-                        <p>Sur le web, tout est possible</p>
-                    </article>
-                    <article>
-                        <h4>Application web</h4>
-                        <p>Et si votre site web était votre produit ?</p>
-                    </article>
+                <div class="main-home-titleblock">
+                    <p class="main-home-titleblock-intro">Bonjour, je m'appelle Nicolas Cesari, je suis</p>
+                    <h1 class="main-home-titleblock-title">Développeur Web</h1>
                 </div>
+                <article class="main-home-services">
+                    <h3 class="main-home-services-title">Services</h3>
+                    <article class="main-home-services-service">
+                        <h4 class="main-home-services-service-title">Site vitrine</h4>
+                        <p class="main-home-services-service-content">Faites exister votre entreprise sur le web</p>
+                    </article>
+                    <article class="main-home-services-service">
+                        <h4 class="main-home-services-service">Blog</h4>
+                        <p class="main-home-services-service-content">Diffusez votre message au monde</p>
+                    </article>
+                    <article class="main-home-services-service">
+                        <h4 class="main-home-services-service-title">Site E-Commerce</h4>
+                        <p class="main-home-services-service-content">Ouvrez votre boutique en ligne</p>
+                    </article>
+                    <article>
+                        <h4 class="main-home-services-service-title">Site sur mesure</h4>
+                        <p class="main-home-services-service-content">Sur le web, tout est possible</p>
+                    </article>
+                    <article class="main-home-services-service">
+                        <h4 class="main-home-services-service-title">Application web</h4>
+                        <p class="main-home-services-service-content">Et si votre site web était votre produit ?</p>
+                    </article>
+                </article>
             </main>
             <footer class="main-footer">
                     <form class="main-footer-contactform">
@@ -62,12 +63,12 @@
                         <input class="main-footer-contactform-input" type="text" placeholder="Nom*">
                         <input class="main-footer-contactform-input" type="email" placeholder="Email*">
                         <textarea
-                         class="main-footer-contactform-input footer-contactform-input-textarea"
-                         type="textarea"
-                         rows="5"
-                         cols="3"
-                         placeholder="Message*"
-                         ></textarea>
+                            class="main-footer-contactform-input main-footer-contactform-input-textarea"
+                            type="textarea"
+                            rows="5"
+                            cols="3"
+                            placeholder="Message*"
+                            ></textarea>
                         <input class="main-footer-contactform-submit" type="submit">
                     </form>
                 <nav class="main-footer-nav">
@@ -88,7 +89,7 @@
                     </address>
                 </div>
             </footer>
-        </div>
-    </body>
+        </body>
+    </div>
     <script src="./index.js"></script>
 </html>

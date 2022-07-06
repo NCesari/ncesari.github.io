@@ -57,20 +57,35 @@ table {
   src: url(../assets/Fonts/Roboto/Roboto-Regular.ttf);
 }
 .main {
+  min-height: 100%;
+  min-width: 100%;
   font-family: Roboto;
   background-color: #00003B;
   color: white;
-  height: auto;
   display: flex;
   flex-direction: column;
-  padding: 0 1rem 0.5rem 1rem;
 }
 .main-header {
-  width: 50px;
+  position: relative;
+  top: 0;
+  padding: 1rem;
 }
-.main-header-nav-logo {
+.main-header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.main-header-nav-brand {
   display: flex;
   height: 50px;
+}
+.main-header-nav-brand-logo {
+  display: block;
+}
+.main-header-nav-brand-name {
+  display: block;
+  height: 20px;
+  position: relative;
+  top: 15px;
 }
 .main-header-nav-links {
   display: flex;
@@ -78,7 +93,7 @@ table {
   width: 0;
   height: calc(100vh - 50px);
   position: absolute;
-  top: 50px;
+  top: 82px;
   right: 0;
   background-color: black;
 }
@@ -88,8 +103,6 @@ table {
 .main-header-nav-links-link > a {
   text-decoration: none;
   color: white;
-  content: "";
-  width: 0;
   height: 1px;
   display: block;
   padding: 1rem;
@@ -98,7 +111,7 @@ table {
 .main-header-nav-show .main-header-nav-links {
   width: 100%;
 }
-.main-header-nav-ham {
+.main-header-nav-burger {
   display: block;
   position: relative;
   padding: 0;
@@ -107,14 +120,14 @@ table {
   border: none;
   background: transparent;
 }
-.main-header-nav-ham-bar {
+.main-header-nav-burger-bar {
   display: block;
   width: 50px;
   height: 4px;
   background-color: aqua;
   border-radius: 3px;
 }
-.main-header-nav-ham-bar::before, .main-header-nav-ham-bar::after {
+.main-header-nav-burger-bar::before, .main-header-nav-burger-bar::after {
   content: "";
   width: 50px;
   height: 4px;
@@ -123,24 +136,33 @@ table {
   border-radius: 3px;
   left: 0;
 }
-.main-header-nav-ham-bar::before {
+.main-header-nav-burger-bar::before {
   transform: translateY(-12px);
 }
-.main-header-nav-ham-bar::after {
+.main-header-nav-burger-bar::after {
   transform: translateY(12px);
 }
 .main-home {
-  margin: 1rem;
+  padding: 0.75rem;
+  margin: 0.75rem;
 }
-.main-home-intro {
-  font-size: large;
+.main-home-titleblock-intro {
+  height: 2rem;
+  max-width: 10rem;
+  line-height: normal;
+  padding: 0.5rem;
 }
-.main-home-title {
+.main-home-titleblock-title {
   font-weight: bold;
   font-size: 2rem;
+  padding: 0.5rem;
 }
-.main-footer {
-  margin: 1rem;
+.main-home-services {
+  display: flex;
+  flex-direction: column;
+}
+.main-home-services-service-title {
+  font-size: larger;
 }
 .main-footer-nav {
   visibility: hidden;
@@ -148,20 +170,15 @@ table {
 .main-footer-contactform {
   display: flex;
   flex-direction: column;
-  margin: 1rem;
 }
 .main-footer-contactform-title {
   font-size: 1.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 .main-footer-contactform-input {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
   border-radius: 10px;
-  padding: 0.5rem;
 }
 .main-footer-contactform-input-textarea {
+  font-family: Roboto;
   height: 15vh;
   max-width: 100%;
 }
@@ -175,6 +192,5 @@ table {
 }
 
 .subtitle {
-  margin: 1rem;
   font-size: 1.5rem;
 }/*# sourceMappingURL=styles.css.map */

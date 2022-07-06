@@ -1,0 +1,34 @@
+@mixin home {
+    padding: 0.75rem;
+    margin: 0.75rem;
+    &-titleblock{
+        
+        &-intro{
+            height: 2rem;
+            max-width: 10rem;
+            line-height: normal;
+            padding: 00.5rem;
+        };
+        &-title{
+            font-weight:bold;
+            font-size: 2rem ;
+            padding: 00.5rem;
+        }
+    }
+    &-services{
+        display: flex;
+        flex-direction: column;
+        &-title{
+
+        }
+        &-service{
+
+            &-title{
+                font-size: larger;
+            }
+            &-content{
+                
+            }
+        }
+    }
+}

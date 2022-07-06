@@ -2,6 +2,7 @@
 @import "./partials/vars";
 @import "./mixins/footer";
 @import "./mixins/header";
+@import "./mixins/home";
 
 @font-face {
     font-family: Roboto;
@@ -9,25 +10,18 @@
 }
 
 .main{
+    min-height: 100%;
+    min-width: 100%;
     font-family: Roboto;
     background-color: $main-color;
     color: white;
-    height: auto;
     display: flex;
     flex-direction: column;
-    padding: 0 1rem 0.5rem 1rem;
     &-header{
         @include header;
     };
     &-home{
-        margin: 1rem;
-        &-intro{
-            font-size:large;
-        };
-        &-title{
-            font-weight:bold;
-            font-size: 2rem ;
-        }
+        @include home;
     };
    &-footer{
      @include footer;
@@ -40,6 +34,5 @@
 
 
 .subtitle{
-    margin: 1rem;
     font-size: 1.5rem;
 }

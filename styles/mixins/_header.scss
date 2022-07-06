@@ -1,18 +1,32 @@
+@import "./burger";
+
 @mixin header{
-     width: 50px;
+    position: relative;
+    top: 0;
+    padding: 1rem;
     &-nav{
-        &-logo{
+        display: flex;
+        justify-content: space-between;
+        &-brand{
             display: flex;
             height: 50px;
+            &-logo{
+                display: block;
+            }
+            &-name{
+                display: block;
+                height: 20px;
+                position: relative;
+                top: 15px;
+            }
         }
-
         &-links{
             display: flex;
             flex-direction: column;
             width: 0;
             height: calc(100vh - 50px);
             position: absolute;
-            top: 50px;
+            top: 82px;
             right: 0;
             background-color: black;
             &-link{
@@ -21,8 +35,6 @@
             &-link > a {
                 text-decoration: none;
                 color: white;
-                content:"";
-                width: 0;
                 height: 1px;
                 display: block;
                 padding: 1rem;
@@ -32,36 +44,8 @@
         &-show &-links{
             width: 100%;
         }
-        &-ham{
-            display: block;
-            position: relative;
-            padding: 0;
-            width: 50px;
-            height: 50px;
-            border: none;
-            background: transparent;
-            &-bar{
-                display: block;
-                width: 50px;
-                height: 4px;
-                background-color: aqua;
-                border-radius: 3px;
-            }
-            &-bar::before, &-bar::after{
-                content:"";
-                width: 50px;
-                height: 4px;
-                position: absolute;
-                background-color: aqua;
-                border-radius: 3px;
-                left: 0;
-            }
-            &-bar::before{
-                transform: translateY(-12px);
-            }
-            &-bar::after{
-                transform: translateY(12px);
-            }
+        &-burger{
+            @include burger
         }
     }
 }
