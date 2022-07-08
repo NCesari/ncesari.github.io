@@ -10,10 +10,9 @@
 }
 
 .main{
-    min-height: 100%;
-    min-width: 100%;
+    height: 100vh;
     font-family: Roboto;
-    background-color: $main-color;
+    background-color: $main-back;
     color: white;
     display: flex;
     flex-direction: column;
@@ -23,10 +22,9 @@
     &-home{
         @include home;
     };
-   &-footer{
-     @include footer;
-   }
-
+    &-footer{
+        @include footer;
+    };
 }
 
 

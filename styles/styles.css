@@ -57,10 +57,9 @@ table {
   src: url(../assets/Fonts/Roboto/Roboto-Regular.ttf);
 }
 .main {
-  min-height: 100%;
-  min-width: 100%;
+  height: 100vh;
   font-family: Roboto;
-  background-color: #00003B;
+  background-color: #112;
   color: white;
   display: flex;
   flex-direction: column;
@@ -69,6 +68,7 @@ table {
   position: relative;
   top: 0;
   padding: 1rem;
+  background-color: #00003B;
 }
 .main-header-nav {
   display: flex;
@@ -88,28 +88,34 @@ table {
   top: 15px;
 }
 .main-header-nav-links {
+  /*position*/
   display: flex;
   flex-direction: column;
-  width: 0;
-  height: calc(100vh - 50px);
+  align-items: flex-end;
   position: absolute;
+  z-index: 1;
   top: 82px;
   right: 0;
-  background-color: black;
+  visibility: hidden;
+  /*dimensions*/
+  height: calc(100vh - 50px);
+  width: 100%;
+  /*couleur*/
+  background-color: rgba(0, 0, 59, 0.85);
 }
 .main-header-nav-links-link {
-  padding: 0 10px;
+  padding: 10px;
 }
-.main-header-nav-links-link > a {
+.main-header-nav-links-link a {
+  color: #77F8FC;
   text-decoration: none;
-  color: white;
   height: 1px;
   display: block;
   padding: 1rem;
   font-size: 1.6rem;
 }
 .main-header-nav-show .main-header-nav-links {
-  width: 100%;
+  visibility: visible;
 }
 .main-header-nav-burger {
   display: block;
@@ -124,7 +130,7 @@ table {
   display: block;
   width: 50px;
   height: 4px;
-  background-color: aqua;
+  background-color: #77F8FC;
   border-radius: 3px;
 }
 .main-header-nav-burger-bar::before, .main-header-nav-burger-bar::after {
@@ -132,7 +138,7 @@ table {
   width: 50px;
   height: 4px;
   position: absolute;
-  background-color: aqua;
+  background-color: #77F8FC;
   border-radius: 3px;
   left: 0;
 }
@@ -160,22 +166,55 @@ table {
 .main-home-services {
   display: flex;
   flex-direction: column;
+  padding: 1rem;
+}
+.main-home-services-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.main-home-services-service {
+  background-color: #00003B;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
 }
 .main-home-services-service-title {
   font-size: larger;
+  margin-bottom: 1rem;
+}
+.main-home-services-service-content {
+  margin-bottom: 0.75rem;
+}
+.main-footer {
+  padding: 2rem;
+  position: relative;
+  bottom: 0;
+  background-color: #112;
+}
+.main-footer-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
 }
 .main-footer-nav {
   visibility: hidden;
+}
+.main-footer-coords {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.main-footer-coords-coord {
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #77F8FC;
 }
 .main-footer-contactform {
   display: flex;
   flex-direction: column;
 }
-.main-footer-contactform-title {
-  font-size: 1.5rem;
-}
 .main-footer-contactform-input {
   border-radius: 10px;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 .main-footer-contactform-input-textarea {
   font-family: Roboto;
@@ -183,12 +222,19 @@ table {
   max-width: 100%;
 }
 .main-footer-contactform-submit {
-  background-color: #00003B;
-  color: white;
-  border: 2px solid;
-  border-radius: 10px;
   height: 2rem;
   width: 5rem;
+  margin: 0.5rem;
+  /*style*/
+  background-color: #112;
+  color: #77F8FC;
+  border: 2px solid;
+  border-radius: 10px;
+  align-self: flex-end;
+}
+.main-footer-contactform-submit:hover {
+  color: #112;
+  background-color: #77F8FC;
 }
 
 .subtitle {

@@ -1,9 +1,11 @@
+@import "../partials/vars";
 @import "./burger";
 
 @mixin header{
     position: relative;
     top: 0;
     padding: 1rem;
+    background-color: $main-header;
     &-nav{
         display: flex;
         justify-content: space-between;
@@ -21,28 +23,35 @@
             }
         }
         &-links{
+            /*position*/
             display: flex;
             flex-direction: column;
-            width: 0;
-            height: calc(100vh - 50px);
-            position: absolute;
+            align-items: flex-end;
+            position:absolute;
+            z-index: 1;
             top: 82px;
             right: 0;
-            background-color: black;
+            visibility: hidden;
+            /*dimensions*/
+            height: calc(100vh - 50px);
+            width: 100%;
+            /*couleur*/
+            background-color: $main-header-transparent ;
             &-link{
-                padding: 0 10px
+                padding: 10px;
             }
-            &-link > a {
+            &-link a{
+                color: $skyblue;
                 text-decoration: none;
-                color: white;
                 height: 1px;
                 display: block;
                 padding: 1rem;
                 font-size: 1.6rem;
             }
+            
         }
         &-show &-links{
-            width: 100%;
+            visibility: visible;
         }
         &-burger{
             @include burger
