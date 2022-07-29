@@ -1,0 +1,86 @@
+@import "../partials/vars";
+@mixin main{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    &-article{
+        &-title{
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        margin: auto;
+        width: 70vw;
+        padding: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: $border-radius;
+        line-height: 1.5rem;
+        background-color: $article-back;
+        font-size: 1.2rem;
+        &-skills{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: white;
+            border-radius: $border-radius;
+            padding: 1rem;
+            color: black;
+            li{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 1rem;
+                gap: 1rem;
+            }
+            img{
+                height: 50px;
+            }
+        }
+    }
+    &-contact{
+        margin: auto;
+        width: 70vw;
+        padding: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: $border-radius;
+        line-height: 1.5rem;
+        background-color: $article-back;
+        font-size: 1.2rem;
+        &-title{
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        &-coords{
+            display: flex;
+            flex-direction: column;
+            a{
+                color: $skyblue;
+                text-decoration: none;
+            }
+        }
+        &-form{
+            display: flex;
+            flex-direction: column;
+            &-input{
+                font-family: Roboto;
+                border-radius: $border-radius;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                &-textarea{
+                }
+            }
+            &-submit{
+                font-family: Roboto;
+                border-radius: $border-radius;
+                height: 40px;
+                width: 100px;
+                text-align: center;
+                background-color: $article-back;
+                border: solid 2px $skyblue;
+                color: $skyblue;
+            }
+        }
+    }
+}

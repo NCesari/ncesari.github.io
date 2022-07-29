@@ -1,36 +1,31 @@
 @import "./partials/reset";
 @import "./partials/vars";
-@import "./mixins/footer";
 @import "./mixins/header";
-@import "./mixins/home";
+@import "./mixins/main";
+@import "./mixins/footer";
 
 @font-face {
     font-family: Roboto;
     src: url(../assets/Fonts/Roboto/Roboto-Regular.ttf);
+};
+
+html{
+    font-family: Roboto;
+    text-align: justify;
+}
+
+.main-back{
+    background-color: $main-back;
+}
+
+.header{
+    @include header
 }
 
 .main{
-    height: 100vh;
-    font-family: Roboto;
-    background-color: $main-back;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    &-header{
-        @include header;
-    };
-    &-home{
-        @include home;
-    };
-    &-footer{
-        @include footer;
-    };
+    @include main
 }
 
-
-
-
-
-.subtitle{
-    font-size: 1.5rem;
+.footer{
+    @include footer
 }
